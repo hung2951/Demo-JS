@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu{
+    @apply text-white;
+}
+.menu-item{
+    @apply flex pl-10;
+}
+.menu-item li{
+    @apply block hover:bg-black py-3;
+}
+.menu-item li a{
+    @apply px-3 ;
+}
+.content{
+    @apply grid grid-cols-3 gap-5;
+}
+.content a{
+    @apply border-[1px] border-[#ccc] py-5;
+}
+.content a img{
+    @apply mx-auto;
+}
+.content a h3{
+    @apply text-red-500 font-bold pl-6 pt-2 hover:text-red-700;
+}
+.content a p{
+    @apply pl-6 text-xs pt-2 pr-2;
+}
