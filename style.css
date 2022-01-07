@@ -9,10 +9,10 @@
     @apply flex pl-10;
 }
 .menu-item li{
-    @apply block hover:bg-black py-3;
+    @apply hover:bg-[#272f54] leading-[50px];
 }
 .menu-item li a{
-    @apply px-3 ;
+    @apply px-3;
 }
 .content{
     @apply grid grid-cols-3 gap-5;
