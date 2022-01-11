@@ -5,7 +5,7 @@ const NewsList = {
     <h1 class="my-7 text-[#272f54] font-bold ">TIN TỨC HỌC TẬP</h1>
       <div class="content">
         ${DataNewsList.map((data) =>/*html*/`
-          <a href="">
+          <a href="/news/${data.id}">
             <figure>
               <img src="${data.image}" alt="">
             </figure>
@@ -18,7 +18,7 @@ const NewsList = {
       <h1 class="my-7 text-[#272f54] font-bold ">HOẠT ĐỘNG SINH VIÊN</h1>
       <div class="content">
         ${DataNewsList.map((data) =>/*html*/`
-          <a href="">
+          <a href="/news/${data.id}">
             <figure>
               <img src="${data.image}" alt="">
             </figure>

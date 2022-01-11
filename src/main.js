@@ -3,25 +3,29 @@ import Header from "./layouts/header";
 import HomePage from "./pages/home";
 import Footer from "./layouts/footer";
 import AboutPage from "./pages/about";
-const router = new Navigo("/", {linksSelector:"a"});
+import DetailNewsPage from "./pages/detailNews";
+import NewsPage from "./pages/news";
+const router = new Navigo("/", { linksSelector: "a" });
 
-const render = (header,content,footer) => {
-    document.getElementById("header").innerHTML = header.print();
-    document.getElementById("main").innerHTML = content.print();
-    document.getElementById("footer").innerHTML = footer.print();
-}
-const about_render = (header,about,footer) =>{
-    document.getElementById("header").innerHTML = header.print();
-    document.getElementById("main").innerHTML = about.print();
-    document.getElementById("footer").innerHTML = footer.print();
+const render = (content) => {
+    document.getElementById("header").innerHTML = Header.print();
+    document.getElementById("main").innerHTML = content;
+    document.getElementById("footer").innerHTML = Footer.print();
 }
 router.on({
     "/": () => {
-        render(Header,HomePage,Footer);
+        render(HomePage.print());
     },
     "/about": () => {
-        about_render(Header,AboutPage,Footer);
-    }
+        render(AboutPage.print());
+    },
+    "/news": () => {
+        render(NewsPage.print());
+    },
+    "/news/:id": ({ data }) => {
+        const { id } = data;
+        render(DetailNewsPage.print(id));
+    },
 });
 
 router.resolve();

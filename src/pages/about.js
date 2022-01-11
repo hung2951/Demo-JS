@@ -1,6 +1,6 @@
 const AboutPage = {
     print(){
-        return /*html*/ `
+        return /* html */`
             <h1>About page</h1>
         `
     }
