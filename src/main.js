@@ -6,6 +6,7 @@ import AboutPage from "./pages/about";
 import DetailNewsPage from "./pages/detailNews";
 import NewsPage from "./pages/news";
 import SignIn from "./login/signin";
+import SignUp from "./login/signup";
 const router = new Navigo("/", { linksSelector: "a" });
 
 const render = (content) => {
@@ -30,8 +31,11 @@ router.on({
         const { id } = data;
         render(DetailNewsPage.print(id));
     },
-    "signin": () => {
+    "/signin": () => {
         login(SignIn.print());
+    },
+    "/signup":()=>{
+        login(SignUp.print());
     },
 });
 
