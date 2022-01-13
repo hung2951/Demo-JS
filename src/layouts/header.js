@@ -16,9 +16,7 @@ const Header = {
         <div class="py-3 pl-20">
          ${FormSearch.print()}
         </div>
-        <a class="py-2 pl-20" href="/signin" >
-          <i class="fas fa-user fa-2x"></i>
-        </a>
+        <div class="text-white pl-1 pt-3"><a href="/signin">Đăng nhập</a></div>
       </div>
         `
   }
