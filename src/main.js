@@ -12,7 +12,7 @@ import NewsAdd from "./admin/newsadd";
 import DashBoard from "./admin/dashboard";
 import HeaderAdmin from "./admin/header";
 import NewsEdit from "./admin/newsedit";
-const router = new Navigo("/");
+const routes = new Navigo("/",{linksSelector:"a"});
 
 const render = (content) => {
     document.getElementById("header").innerHTML = Header.print();
@@ -26,7 +26,7 @@ const admin_render = (content) => {
     document.getElementById("header").innerHTML = HeaderAdmin.print();
     document.getElementById("main").innerHTML = content;
 }
-router.on({
+routes.on({
     "/": () => {
         render(HomePage.print());
     },
@@ -60,4 +60,4 @@ router.on({
     }
 });
 
-router.resolve();
+routes.resolve();
