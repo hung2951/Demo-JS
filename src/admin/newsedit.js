@@ -1,9 +1,25 @@
 import DataNewsList from "../data";
+import HeaderAdmin from "./header";
 const NewsEdit = {
     print(id) {
         const result = DataNewsList.find(( post ) => post.id === id);
         return /*html*/ `
-        <div>
+        <header class="bg-white shadow">
+        ${HeaderAdmin.print()}
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold text-gray-900">
+                News edit
+            </h1>
+        </div>
+        </header>
+        <main>
+            <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+                <!-- Replace with your content -->
+                <div class="px-4 py-6 sm:px-0">
+                    <div class="border-4 border-dashed border-gray-200 rounded-lg h-96">
+                    
+                    <div>
+        
           <div class="mt-5 md:mt-0 md:col-span-2">
             <form action="#" method="POST">
               <div class="shadow sm:rounded-md sm:overflow-hidden">
@@ -65,6 +81,12 @@ const NewsEdit = {
           </div>
         </div>
       </div>
+      </div>
+                </div>
+                <!-- /End replace -->
+            </div>
+        </main>
+        
         `
     }
 }

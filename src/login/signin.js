@@ -49,7 +49,7 @@ const SignIn = {
                 </button>
                 </div>
                 <div class="text-center">
-                    <p>You don't have an account?<a href="/signup " class="text-blue-600"> Sign up</a></p>
+                    <p>You don't have an account?<a href="/signup" class="text-blue-600"> Sign up</a></p>
                 </div>
             </form>
             </div>

@@ -1,7 +1,5 @@
 import Navigo from "navigo";
-import Header from "./layouts/header";
 import HomePage from "./pages/home";
-import Footer from "./layouts/footer";
 import AboutPage from "./pages/about";
 import DetailNewsPage from "./pages/detailNews";
 import NewsPage from "./pages/news";
@@ -10,20 +8,16 @@ import SignUp from "./login/signup";
 import News from "./admin/news";
 import NewsAdd from "./admin/newsadd";
 import DashBoard from "./admin/dashboard";
-import HeaderAdmin from "./admin/header";
 import NewsEdit from "./admin/newsedit";
-const routes = new Navigo("/",{linksSelector:"a"});
+const routes = new Navigo("/", {linksSelector: "a"});
 
 const render = (content) => {
-    document.getElementById("header").innerHTML = Header.print();
     document.getElementById("main").innerHTML = content;
-    document.getElementById("footer").innerHTML = Footer.print();
 }
 const login = (content) =>{
     document.getElementById("main").innerHTML = content;
 }
 const admin_render = (content) => {
-    document.getElementById("header").innerHTML = HeaderAdmin.print();
     document.getElementById("main").innerHTML = content;
 }
 routes.on({
